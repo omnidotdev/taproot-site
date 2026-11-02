@@ -2,7 +2,7 @@ import cn from "@/lib/utils";
 
 import type { ReactNode } from "react";
 
-type Lang = "dockerfile" | "bash" | "json" | "output";
+type Lang = "dockerfile" | "bash" | "json" | "output" | "sql" | "graphql";
 
 interface Rule {
   re: RegExp;
@@ -56,6 +56,27 @@ const rules: Record<Lang, Rule[]> = {
     { re: /\b(?:done|pushed)\b[^\n]*/y, cls: C.ok },
     { re: /\.{2,}/y, cls: C.punc },
     { re: /\b\d+(?:\.\d+)?s?\b/y, cls: C.num },
+  ],
+  sql: [
+    { re: /--[^\n]*/y, cls: C.com },
+    { re: /'(?:[^'\\]|\\.)*'/y, cls: C.str },
+    {
+      re: /\b(create|table|primary|key|references|not|null|default|unique|select|insert|into|values|from|where|and|or|order|by|constraint)\b/iy,
+      cls: C.kw,
+    },
+    {
+      re: /\b(uuid|text|timestamptz|boolean|int|integer|bigint|serial|jsonb|numeric|varchar|date)\b/iy,
+      cls: C.num,
+    },
+    { re: /\b\d+\b/y, cls: C.num },
+  ],
+  graphql: [
+    { re: /#[^\n]*/y, cls: C.com },
+    { re: /"(?:[^"\\]|\\.)*"/y, cls: C.str },
+    { re: /\b(query|mutation|subscription|fragment|on)\b/y, cls: C.kw },
+    { re: /@\w+/y, cls: C.flag },
+    { re: /\b\d+\b/y, cls: C.num },
+    { re: /[{}()[\]:!]/y, cls: C.punc },
   ],
 };
 

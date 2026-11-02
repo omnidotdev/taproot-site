@@ -5,7 +5,7 @@ import {
   hotkeyLabel,
   useHotkeys,
 } from "@omnidotdev/thornberry/use-hotkeys";
-import { BookOpen, Boxes, MoonStar } from "lucide-react";
+import { BookOpen, Boxes, MoonStar, Workflow } from "lucide-react";
 
 import app from "@/lib/config/app.config";
 import { useTheme } from "@/providers/ThemeProvider";
@@ -36,6 +36,14 @@ const CommandPalette = () => {
   useHotkeys(GLOBAL_HOTKEYS.toggleTheme, toggleTheme);
 
   const commands: CommandAction[] = [
+    {
+      id: "how-it-works",
+      label: "How it works",
+      group: "Navigation",
+      icon: Workflow,
+      keywords: ["showcase", "schema", "sql", "graphql", "demo"],
+      onSelect: () => scrollToSection("showcase"),
+    },
     {
       id: "features",
       label: "Features",

@@ -13,7 +13,10 @@ import { ThemeToggle } from "@/components/layout";
 import app from "@/lib/config/app.config";
 import cn from "@/lib/utils";
 
-const navLinks = [{ label: "Features", href: "#features" }];
+const navLinks = [
+  { label: "How it works", href: "#showcase" },
+  { label: "Features", href: "#features" },
+];
 
 /**
  * Layout header with anchor nav and mobile hamburger.
