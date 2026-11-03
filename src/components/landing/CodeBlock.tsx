@@ -15,14 +15,14 @@ interface Rule {
  * zinc for comments and punctuation.
  */
 const C = {
-  kw: "text-primary",
-  str: "text-emerald-400",
+  kw: "text-green-500",
+  str: "text-amber-400",
   com: "text-zinc-500",
-  num: "text-amber-300/90",
+  num: "text-sky-400",
   punc: "text-zinc-500",
   flag: "text-zinc-500",
   ok: "text-emerald-400",
-  def: "text-zinc-300",
+  def: "text-zinc-200",
 };
 
 const rules: Record<Lang, Rule[]> = {
@@ -74,6 +74,9 @@ const rules: Record<Lang, Rule[]> = {
     { re: /#[^\n]*/y, cls: C.com },
     { re: /"(?:[^"\\]|\\.)*"/y, cls: C.str },
     { re: /\b(query|mutation|subscription|fragment|on)\b/y, cls: C.kw },
+    // field or argument names that open a selection or args list, colored like
+    // the OG preview's sky fields
+    { re: /[a-zA-Z_]\w*(?=\s*[({])/y, cls: C.num },
     { re: /@\w+/y, cls: C.flag },
     { re: /\b\d+\b/y, cls: C.num },
     { re: /[{}()[\]:!]/y, cls: C.punc },

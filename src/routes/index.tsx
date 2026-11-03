@@ -117,16 +117,16 @@ function HeroSection() {
         </div>
 
         <h1 className="font-bold text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          <span className="block">The most direct path</span>
+          <span className="block">Tap into Postgres.</span>
           <span className="block bg-gradient-to-br from-primary to-secondary bg-clip-text pb-2 text-transparent">
-            from Postgres to GraphQL
+            GraphQL, straight from the source.
           </span>
         </h1>
 
         <p className="max-w-xl text-lg text-muted-foreground md:text-xl">
           Point Taproot at your PostgreSQL database and it serves a full GraphQL
-          API — queries, filtering, pagination, mutations, subscriptions, and
-          row-level security — with zero codegen.
+          API (queries, filtering, pagination, mutations, subscriptions, and
+          row-level security) with zero codegen.
         </p>
       </div>
 
@@ -165,7 +165,7 @@ const features: Feature[] = [
     icon: Wand2,
     title: "Zero codegen",
     description:
-      "Introspects your tables, columns, relationships, and enums at startup and serves a live, queryable schema — no generated files to maintain.",
+      "Introspects your tables, columns, relationships, and enums at startup and serves a live, queryable schema, with no generated files to maintain.",
   },
   {
     icon: FileCode,

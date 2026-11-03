@@ -17,7 +17,7 @@ const GQL = `query {
     filter: { name: { includesInsensitive: "al" } }
   ) {
     nodes {
-      nodeId
+      id
       name
       email
     }
