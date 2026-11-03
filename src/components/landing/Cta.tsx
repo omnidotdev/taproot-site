@@ -35,7 +35,7 @@ const Cta = () => {
         <div className="mx-auto mt-8 max-w-md text-left">
           <CodeBlock
             lang="bash"
-            code="brew install omnidotdev/tap/taproot"
+            code="curl -fsSL https://taproot.omni.dev/install.sh | sh"
             prompt
           />
         </div>
