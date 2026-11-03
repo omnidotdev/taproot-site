@@ -116,9 +116,9 @@ function HeroSection() {
           />
         </div>
 
-        <h1 className="font-bold text-4xl tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 className="font-bold text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
           <span className="block">The most direct path</span>
-          <span className="block bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-br from-primary to-secondary bg-clip-text pb-2 text-transparent">
             from Postgres to GraphQL
           </span>
         </h1>

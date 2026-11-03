@@ -53,11 +53,16 @@ const Showcase = () => {
 
         <div
           className={cn(
-            "grid items-center gap-4 transition-all delay-150 duration-700 lg:grid-cols-[1fr_auto_1fr]",
+            "grid items-stretch gap-4 transition-all delay-150 duration-700 lg:grid-cols-[1fr_auto_1fr]",
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
           )}
         >
-          <CodeBlock lang="sql" title="schema.sql" code={SQL} />
+          <CodeBlock
+            lang="sql"
+            title="schema.sql"
+            code={SQL}
+            className="h-full"
+          />
 
           <div
             className="flex items-center justify-center text-primary"
@@ -68,7 +73,12 @@ const Showcase = () => {
             </span>
           </div>
 
-          <CodeBlock lang="graphql" title="query.graphql" code={GQL} />
+          <CodeBlock
+            lang="graphql"
+            title="query.graphql"
+            code={GQL}
+            className="h-full"
+          />
         </div>
       </div>
     </section>
