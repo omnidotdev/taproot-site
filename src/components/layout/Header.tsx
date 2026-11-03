@@ -15,6 +15,7 @@ import cn from "@/lib/utils";
 
 const navLinks = [
   { label: "How it works", href: "#showcase" },
+  { label: "Performance", href: "#performance" },
   { label: "Features", href: "#features" },
 ];
 

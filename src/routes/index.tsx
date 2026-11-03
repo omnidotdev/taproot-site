@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 
 import Cta from "@/components/landing/Cta";
+import Performance from "@/components/landing/Performance";
 import Showcase from "@/components/landing/Showcase";
 import app from "@/lib/config/app.config";
 import useInView from "@/lib/hooks/useInView";
@@ -43,6 +44,7 @@ function HomePage() {
     <div className="flex flex-col">
       <HeroSection />
       <Showcase />
+      <Performance />
       <FeaturesSection />
       <Cta />
     </div>

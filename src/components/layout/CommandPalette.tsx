@@ -5,7 +5,7 @@ import {
   hotkeyLabel,
   useHotkeys,
 } from "@omnidotdev/thornberry/use-hotkeys";
-import { BookOpen, Boxes, MoonStar, Workflow } from "lucide-react";
+import { BookOpen, Boxes, Gauge, MoonStar, Workflow } from "lucide-react";
 
 import app from "@/lib/config/app.config";
 import { useTheme } from "@/providers/ThemeProvider";
@@ -43,6 +43,14 @@ const CommandPalette = () => {
       icon: Workflow,
       keywords: ["showcase", "schema", "sql", "graphql", "demo"],
       onSelect: () => scrollToSection("showcase"),
+    },
+    {
+      id: "performance",
+      label: "Performance",
+      group: "Navigation",
+      icon: Gauge,
+      keywords: ["benchmark", "speed", "fast", "latency", "throughput"],
+      onSelect: () => scrollToSection("performance"),
     },
     {
       id: "features",
