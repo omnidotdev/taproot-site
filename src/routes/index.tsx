@@ -53,7 +53,7 @@ function HomePage() {
 
 function InstallCommand() {
   const [copied, setCopied] = useState(false);
-  const command = "brew install omnidotdev/tap/taproot";
+  const command = "curl -fsSL https://taproot.omni.dev/install.sh | sh";
 
   const copy = () => {
     navigator.clipboard
@@ -66,22 +66,57 @@ function InstallCommand() {
   };
 
   return (
-    <button
-      type="button"
-      onClick={copy}
-      aria-label="Copy install command"
-      className="group flex items-center gap-3 rounded-xl border bg-card/60 px-4 py-3 font-mono text-sm backdrop-blur-sm transition-colors hover:border-primary/40 hover:bg-card"
-    >
-      <span className="select-none text-primary">$</span>
-      <span className="text-foreground">{command}</span>
-      <span className="ml-1 text-muted-foreground transition-colors group-hover:text-primary">
-        {copied ? (
-          <Check className="h-4 w-4 text-primary" />
-        ) : (
-          <Copy className="h-4 w-4" />
-        )}
-      </span>
-    </button>
+    <div className="flex max-w-full flex-col items-center gap-3">
+      <button
+        type="button"
+        onClick={copy}
+        aria-label="Copy install command"
+        className="group flex max-w-full items-center gap-3 rounded-xl border bg-card/60 px-4 py-3 font-mono text-xs backdrop-blur-sm transition-colors hover:border-primary/40 hover:bg-card sm:text-sm"
+      >
+        <span className="select-none text-primary">$</span>
+        <span className="overflow-x-auto whitespace-nowrap text-foreground">
+          {command}
+        </span>
+        <span className="ml-1 shrink-0 text-muted-foreground transition-colors group-hover:text-primary">
+          {copied ? (
+            <Check className="h-4 w-4 text-primary" />
+          ) : (
+            <Copy className="h-4 w-4" />
+          )}
+        </span>
+      </button>
+
+      <p className="max-w-md text-center text-muted-foreground text-xs leading-relaxed">
+        Also on{" "}
+        <a
+          href="https://github.com/omnidotdev/homebrew-tap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-foreground underline underline-offset-2"
+        >
+          Homebrew
+        </a>{" "}
+        and the{" "}
+        <a
+          href="https://aur.archlinux.org/packages/omnidotdev-taproot"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-foreground underline underline-offset-2"
+        >
+          AUR
+        </a>
+        , or grab a{" "}
+        <a
+          href={`${app.repoUrl}/releases/latest`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-foreground underline underline-offset-2"
+        >
+          prebuilt binary
+        </a>
+        .
+      </p>
+    </div>
   );
 }
 
