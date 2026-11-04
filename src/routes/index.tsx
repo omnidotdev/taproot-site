@@ -74,7 +74,7 @@ function InstallCommand() {
         className="group flex max-w-full items-center gap-3 rounded-xl border bg-card/60 px-4 py-3 font-mono text-xs backdrop-blur-sm transition-colors hover:border-primary/40 hover:bg-card sm:text-sm"
       >
         <span className="select-none text-primary">$</span>
-        <span className="overflow-x-auto whitespace-nowrap text-foreground">
+        <span className="min-w-0 overflow-x-auto whitespace-nowrap text-foreground">
           {command}
         </span>
         <span className="ml-1 shrink-0 text-muted-foreground transition-colors group-hover:text-primary">
