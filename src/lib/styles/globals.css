@@ -259,3 +259,25 @@
   opacity: 1;
   transform: scale(1.05);
 }
+
+/* Forged seam: a molten amber-to-coal-red vein through a feature card */
+.feature-seam {
+  position: absolute;
+  top: -12%;
+  bottom: -12%;
+  left: 42%;
+  width: 2px;
+  transform: rotate(13deg);
+  background: linear-gradient(
+    to bottom,
+    var(--secondary),
+    var(--primary) 55%,
+    transparent
+  );
+  box-shadow: 0 0 22px 3px color-mix(in oklch, var(--primary) 50%, transparent);
+  transition: box-shadow 0.5s ease;
+  pointer-events: none;
+}
+.feature-card:hover .feature-seam {
+  box-shadow: 0 0 34px 7px color-mix(in oklch, var(--primary) 80%, transparent);
+}

@@ -255,25 +255,29 @@ function FeaturesSection() {
           </p>
         </div>
 
-        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, description }, i) => (
             <div
               key={title}
               className={cn(
-                "flex flex-col items-start gap-3 transition-all duration-500",
+                "feature-card relative overflow-hidden rounded-2xl border bg-card/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/40",
                 inView
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0",
               )}
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/15">
-                <Icon className="h-5 w-5" />
+              {/* forged seam: a molten amber-to-coal-red vein (styled in globals.css) */}
+              <span aria-hidden className="feature-seam" />
+              <div className="relative">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/15">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-4 font-semibold text-lg">{title}</h3>
+                <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
+                  {description}
+                </p>
               </div>
-              <h3 className="font-semibold text-lg">{title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {description}
-              </p>
             </div>
           ))}
         </div>
