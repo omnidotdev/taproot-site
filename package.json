@@ -38,7 +38,7 @@
     "@types/react-dom": "^19.2.3",
     "@unlighthouse/cli": "^0.17.4",
     "@vitejs/plugin-react": "^5.1.2",
-    "happy-dom": "^20.0.11",
+    "happy-dom": "^21.0.0",
     "husky": "^9.1.7",
     "knip": "^5.80.0",
     "typescript": "^5.9.3",
