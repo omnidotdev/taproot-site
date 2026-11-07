@@ -6,7 +6,7 @@
       --window-size=1200,630 --virtual-time-budget=8000 \
       --screenshot=og-2x.png "file://$PWD/og.html"
     magick og-2x.png -resize 1200x630 -strip ../../public/og.png
-  mark.svg is the Taproot flame mark; the Omni credit mark is inlined below.
+  mark.svg is the Taproot root mark; the Omni credit mark is inlined below.
   Fonts: Inter + JetBrains Mono (Google Fonts).
 -->
 <html>
@@ -87,15 +87,13 @@
 <body>
   <div class="card">
     <div class="ember"></div>
-    <div class="code">FROM rust:1.85 AS build
-WORKDIR /app
-COPY . .
-RUN cargo build --release
+    <div class="code">$ taproot --database-url $DATABASE_URL
 
-FROM gcr.io/distroless/cc-debian12
-COPY --from=build /app/target/release/app /app
-EXPOSE 8080
-CMD ["/app"]</div>
+  introspecting schema public ...
+  42 tables · 118 relations · 9 enums
+  GraphQL ready → :4000/graphql
+
+{ user(id: 7) { name posts { title } } }</div>
     <div class="scrim"></div>
     <div class="grain"></div>
 
@@ -103,7 +101,7 @@ CMD ["/app"]</div>
       <img class="mark" src="mark.svg" alt="Taproot" />
       <div class="text">
         <div class="word">Taproot</div>
-        <div class="tag">Source code, fired into containers</div>
+        <div class="tag">The most direct path from Postgres to GraphQL</div>
       </div>
     </div>
 
@@ -121,7 +119,7 @@ CMD ["/app"]</div>
         <b>Omni</b>
       </div>
     </div>
-    <div class="pill">$ <b>taproot</b> build</div>
+    <div class="pill">$ <b>taproot</b> serve</div>
   </div>
 </body>
 </html>

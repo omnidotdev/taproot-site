@@ -27,7 +27,7 @@ const app = {
   },
   /** PWA configuration. Values should match public/manifest.json. */
   pwa: {
-    themeColor: "#15803d",
+    themeColor: "#e8820c",
     backgroundColor: "#0c0a09",
   },
 };
