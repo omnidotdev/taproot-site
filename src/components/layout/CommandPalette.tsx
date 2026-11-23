@@ -1,11 +1,20 @@
 import { SiGithub as GithubIcon } from "@icons-pack/react-simple-icons";
 import { CommandPalette as CommandPaletteShell } from "@omnidotdev/thornberry/command-palette";
+import { ShortcutsDialog } from "@omnidotdev/thornberry/shortcuts-dialog";
 import {
   GLOBAL_HOTKEYS,
   hotkeyLabel,
   useHotkeys,
 } from "@omnidotdev/thornberry/use-hotkeys";
-import { BookOpen, Boxes, Gauge, MoonStar, Workflow } from "lucide-react";
+import {
+  BookOpen,
+  Boxes,
+  Gauge,
+  Keyboard,
+  MoonStar,
+  Workflow,
+} from "lucide-react";
+import { useState } from "react";
 
 import app from "@/lib/config/app.config";
 import { useTheme } from "@/providers/ThemeProvider";
@@ -28,6 +37,8 @@ const scrollToSection = (id: string) => {
  */
 const CommandPalette = () => {
   const { theme, setTheme } = useTheme();
+
+  const [shortcutsOpen, setShortcutsOpen] = useState(false);
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
@@ -86,10 +97,26 @@ const CommandPalette = () => {
       shortcut: hotkeyLabel(GLOBAL_HOTKEYS.toggleTheme),
       onSelect: toggleTheme,
     },
+    {
+      id: "keyboard-shortcuts",
+      label: "Keyboard shortcuts",
+      group: "Preferences",
+      icon: Keyboard,
+      keywords: ["hotkeys", "keys", "help"],
+      shortcut: hotkeyLabel(GLOBAL_HOTKEYS.showShortcuts),
+      onSelect: () => setShortcutsOpen(true),
+    },
   ];
 
   return (
-    <CommandPaletteShell commands={commands} placeholder="Search actions..." />
+    <>
+      <CommandPaletteShell
+        commands={commands}
+        placeholder="Search actions..."
+      />
+      {/* `?` opens it anywhere; the palette entry opens it too */}
+      <ShortcutsDialog open={shortcutsOpen} onOpenChange={setShortcutsOpen} />
+    </>
   );
 };
 
