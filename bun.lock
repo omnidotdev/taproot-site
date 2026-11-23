@@ -7,7 +7,7 @@
       "dependencies": {
         "@ark-ui/react": "^5.30.0",
         "@icons-pack/react-simple-icons": "^13.8.0",
-        "@omnidotdev/thornberry": "github:omnidotdev/thornberry#372ebb2",
+        "@omnidotdev/thornberry": "github:omnidotdev/thornberry#58a1be64c53ccb85ca4421549c5f56e505ae9d74",
         "@tailwindcss/vite": "^4.1.18",
         "@tanstack/nitro-v2-vite-plugin": "^1.141.0",
         "@tanstack/react-query": "^5.90.16",
@@ -142,6 +142,22 @@
 
     "@cloudflare/kv-asset-handler": ["@cloudflare/kv-asset-handler@0.4.2", "", {}, "sha512-SIOD2DxrRRwQ+jgzlXCqoEFiKOFqaPjhnNTGKXSRLvp1HiOvapLaFG2kEr9dYQTYe8rKrd9uvDUzmAITeNyaHQ=="],
 
+    "@codemirror/autocomplete": ["@codemirror/autocomplete@6.20.4", "", { "dependencies": { "@codemirror/language": "^6.0.0", "@codemirror/state": "^6.0.0", "@codemirror/view": "^6.17.0", "@lezer/common": "^1.0.0" } }, "sha512-yF8RhOf2SXlg00+qtupzLhrglcas61boqaONiNcbPIebHCpJocpqTBA6dyrtUrQO47hqyTdeob/3XnYilT7TaQ=="],
+
+    "@codemirror/commands": ["@codemirror/commands@6.11.1", "", { "dependencies": { "@codemirror/language": "^6.0.0", "@codemirror/state": "^6.7.0", "@codemirror/view": "^6.27.0", "@lezer/common": "^1.1.0" } }, "sha512-O/4hG3SC1YwcmQ0d2UVNDs+AsaNWd1iHVxbTeEBuqH+6bExAiPK3iS/BvpY6rZGURALv4ZD3sIgcCmRvw3ehBg=="],
+
+    "@codemirror/language": ["@codemirror/language@6.13.1", "", { "dependencies": { "@codemirror/state": "^6.0.0", "@codemirror/streamparser": "^6.0.0", "@codemirror/view": "^6.23.0", "@lezer/common": "^1.5.0", "@lezer/highlight": "^1.0.0", "@lezer/lr": "^1.0.0", "style-mod": "^4.0.0" } }, "sha512-zfvU2r3TyylQLMj/te+5CnQ0rSqZi8B1oTCBbQkagcLW4Xc6imab6qN+pEJhsuNOLaJqiRyBXp9UhWA1DhVvDw=="],
+
+    "@codemirror/lint": ["@codemirror/lint@6.9.8", "", { "dependencies": { "@codemirror/state": "^6.0.0", "@codemirror/view": "^6.42.0", "crelt": "^1.0.5" } }, "sha512-qNvtcE73xUto/D1RvtgSRI4A1Hg8ekxlvtZpjHpdpisLBnhyu82EUEJMEgaxkjuQCA8vqnrylENWKOsEDCOHcw=="],
+
+    "@codemirror/search": ["@codemirror/search@6.7.2", "", { "dependencies": { "@codemirror/state": "^6.0.0", "@codemirror/view": "^6.37.0", "crelt": "^1.0.5" } }, "sha512-gUYkYhT2+n/+VGZ+8EzE5WFkYZUZYm1VOKDudIsNqh42uRVQJ0a6Yss9sdKT3MeOYfuL1N6AZA57oza0Oyr0LA=="],
+
+    "@codemirror/state": ["@codemirror/state@6.7.6", "", { "dependencies": { "@marijn/find-cluster-break": "^1.0.0" } }, "sha512-kAz+AncRtKuIknedxT1bq4XwXv4UowhbkHU1myPrtVb/jZtImWuV5BXzv5vK6i3kYACsdiZiQKFQQ5Mq7elW8w=="],
+
+    "@codemirror/streamparser": ["@codemirror/streamparser@6.0.0", "", {}, "sha512-JTFPF6xrfjt0mnfGPgzcLiMwYmvIyNaoizp8BYzv8FE8KrT6GBGDZ190rtt+O7Wke3gG/MFHyiY9YGNeimof4w=="],
+
+    "@codemirror/view": ["@codemirror/view@6.43.15", "", { "dependencies": { "@codemirror/state": "^6.7.0", "crelt": "^1.0.6", "style-mod": "^4.1.0", "w3c-keyname": "^2.2.4" } }, "sha512-HHsfpqFeHyXLs983pSRe38Xajs0vFWZQ2BuX0m7Ki8w3jZ5iD8cuR3lBz2/5/X53Dhf32SBHKh6rtSTB6tKeGw=="],
+
     "@csstools/color-helpers": ["@csstools/color-helpers@6.1.1", "", {}, "sha512-gLNsunvwf3mCi5u5o46/Z/JcJMnhbHSaZ69rkgPzNM3J4s8hWwpPUQB6/tt0EDFyCiWzxANlx+2LJwpYj4zS1w=="],
 
     "@csstools/css-calc": ["@csstools/css-calc@3.3.0", "", { "peerDependencies": { "@csstools/css-parser-algorithms": "^4.0.0", "@csstools/css-tokenizer": "^4.0.0" } }, "sha512-c5ihYsPkdG6JCkU2zTMm4+k6r7RXuGxtWYhu5DHMIiF1FHzrfmHL5so11AoFpUv/tu61xfcmT4AmKoFfMPoqdQ=="],
@@ -270,55 +286,63 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@lexical/a11y": ["@lexical/a11y@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-ypvO0SI9DCzEAjxkRLq+gNzRqfjg632RCkwu16Hk94PCBrEmcDhx5iUGg3SRJC7WnM2wXC/F/SB8yWDEfq7tEw=="],
+    "@lexical/a11y": ["@lexical/a11y@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-Xmi6TDF7mkhxYMO7GNN1G5mgdNRN5mMKcvMk7zIWnteXIuBJ4li5LgYXDvnCfYU/qrkocIBQhlJNqaiXzvtktA=="],
 
-    "@lexical/clipboard": ["@lexical/clipboard@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/list": "0.49.0", "@lexical/selection": "0.49.0", "@lexical/utils": "0.49.0", "@types/trusted-types": "^2.0.7", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-AVKj21xH1qU7JAFA/v0hCoafa+Yti1I7cHG+JQIgc/EqCtP8ePeJyIfTPNN/tXskoCdq++HewQoiSXRwwlocVg=="],
+    "@lexical/clipboard": ["@lexical/clipboard@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/list": "0.53.0", "@lexical/selection": "0.53.0", "@lexical/utils": "0.53.0", "@types/trusted-types": "^2.0.7", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-QkSu7wiLtiNCoHBJzdcwmAD91Xz+Q29gPHcLwgk6NqTk255KBhqMEV2KHa87sJKHU4zBQMmhc52QkoaU3GkDxA=="],
 
-    "@lexical/code-core": ["@lexical/code-core@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-29sXI4ydcN/OyBJNlZXkGKtQXzfiIWet+YN20+wT97zkqityOvRilK6qzTRz9Cd0ungEPlJENqXQhsy6BJeXpg=="],
+    "@lexical/code-core": ["@lexical/code-core@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-u684OEtS6lb5IQKeFFAPlNfWhdcnKi2ZctOEgK5o2rHd01FF0pG/J57gbTzcpwnyfw98s6c5SnBuxTAXA7EWsA=="],
 
-    "@lexical/devtools-core": ["@lexical/devtools-core@0.49.0", "", { "dependencies": { "@lexical/html": "0.49.0", "@lexical/link": "0.49.0", "@lexical/mark": "0.49.0", "@lexical/table": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "react": ">=18.x", "react-dom": ">=18.x", "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-LgjNlvRiuO/QF36aG6kfR4ptEvSw587o2+YF6SOsaOB7iw2Z3pqpsKloWSEF4QXaLFI65Li8JjMdQj+BaFMIOA=="],
+    "@lexical/devtools-core": ["@lexical/devtools-core@0.53.0", "", { "dependencies": { "@lexical/html": "0.53.0", "@lexical/link": "0.53.0", "@lexical/mark": "0.53.0", "@lexical/table": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "react": ">=18.x", "react-dom": ">=18.x", "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-CBKNXTXz+k7csz5BfFS5SeeR8p5MdRAZZ/eSp5iPvmphBMujgnEz/U8+cmK60mglH4nofoUjhBZ5iVyY28uohA=="],
 
-    "@lexical/dragon": ["@lexical/dragon@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-62/4DP5qyX/l4Yf5qRyyQrs9BV725eRU3OmLUW6g7T5xrcHXxAo7tia/NvqjqvXdpvQzyHjWgsy7dMitGITUsw=="],
+    "@lexical/dragon": ["@lexical/dragon@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-pulm9Nwg7Cl0tvrJesWGyRFVjUgs0C4gKJ/IBnssYAMP1Sk2Y4vVn5Bw0YJ75ChHa76VNPajUn7jDhLW9BWD2A=="],
 
-    "@lexical/extension": ["@lexical/extension@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0", "@lexical/utils": "0.49.0", "@preact/signals-core": "^1.14.1", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-Wv0VsuqxorbxHCK4ms1PwAu6cXIGNLtflq66auF+zwxOtBprkSFV8VzzzdKLOYD2admP0VK6EqVCeGXFK1GggA=="],
+    "@lexical/extension": ["@lexical/extension@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "@preact/signals-core": "^1.14.4", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-+qjF79P6sBCggg/A5jmQRfQK8CEIXiUK7ndWcbm5m6y/ZOafakBhcjj2yfaxxnM+zPrvj7GZeyHbGpc6/lXENQ=="],
 
-    "@lexical/hashtag": ["@lexical/hashtag@0.49.0", "", { "dependencies": { "@lexical/text": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-aQTpNjrEO5apsaohWGl4ku22EgHpWUzZg5CIzvriS2A1vNmIfzLoCL+lDFpzAwk3DT1Kj1yvGHh5TvhYsb9D8w=="],
+    "@lexical/hashtag": ["@lexical/hashtag@0.53.0", "", { "dependencies": { "@lexical/text": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-ZYw82Gj5pDFqhsqRhubiSV6Jv62Iib2pMC+Lu4oHhKox6azh+FtxLNdqoDTp9iCXGaz3YHMuIrZvtl5qYK/UYw=="],
 
-    "@lexical/history": ["@lexical/history@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-uQdtEd34gIJklXNSdHS2Wko1zxx1xUMVXbiodcLO6a3GeFTE5bKnx6af1zGX78KpYhUQYnHWorKuUvtdZlJPaA=="],
+    "@lexical/history": ["@lexical/history@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-MyNM9jSVLlloKTrka+3X6tRtjAruzsSKkvezq/R/mvsjlXoxLW/6bi4QE0RZtba8Ma4ZwZs6/gpmN4O1P9T+EQ=="],
 
-    "@lexical/html": ["@lexical/html@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/selection": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-NQqAydKzRjQl7Jx+bTTyC2iuz5uhuDaQX0SSPrdfgaFDCPjqQEejcBkCt1QXnu1CkbVHutZKVGVzljx40Y6y+Q=="],
+    "@lexical/html": ["@lexical/html@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/selection": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-QTA+r1+7UleNFb3puIBEp2ENL3Qw4VMayYKO0hoDpr+adyzUNZapIlVVkB4no4Bc4ei5wt9EJK7r4g0G1lfEAw=="],
 
-    "@lexical/internal": ["@lexical/internal@0.49.0", "", { "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-s+XjPC7Qb39A/Xx9ahcz1s69CPix4ultaqyW+MDG0AXYW2quDr7m0USqReKIAiuoLIWtGN5HW8BwV2Y6t4qr6Q=="],
+    "@lexical/internal": ["@lexical/internal@0.53.0", "", { "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-ORSbMXwae0X1SeSsqywx9Lw0Bf8/rJNZzKdQp6uMVGGwgM6Ul+cCAjsKYlG7cnhJILJwYoi2a5+ZK4Y+KFAxlg=="],
 
-    "@lexical/link": ["@lexical/link@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-CsZVu1OfnPOn6IKWVO5DbmKwIuicGtgWSzrZMdMB8w6yPoMgFyPWeVulhPE7LNz2FhaQCWv+lVVYVAiJrUzJsg=="],
+    "@lexical/link": ["@lexical/link@0.53.0", "", { "dependencies": { "@lexical/a11y": "0.53.0", "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-2oEeCTzwtN3EGPN+RcCdorWDn1WuC8GWKl1kWUdbUtJyEqjLtOj97dY1uSPFA+i6BxlDQoUjkl4H+UUfjgJfYw=="],
 
-    "@lexical/list": ["@lexical/list@0.49.0", "", { "dependencies": { "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-zs6wYkxakDRcJO0KmwrPPHgeLLIxzjD+P2CRu+scJCHRuA5e2iSw2iFjH5n/LlWBrlnPMSjeQse4QqsRy9nnqA=="],
+    "@lexical/list": ["@lexical/list@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-wW+ufz4W40v+/fk2F98yxS8fXfmP1qOrEf5EPCmmV+lqxZ3FEPgN0JwPv8XUPF6/IaC8SyndT9eZgf4mJ1HCrQ=="],
 
-    "@lexical/mark": ["@lexical/mark@0.49.0", "", { "dependencies": { "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-JSYD8UYQQOMT6oDYh1KsLPK3KMGfQzU7E9fJkugKEO0/XebfsmiuNtkLCGDVIZOo8bNHlwb1YVvmswC2bjotMQ=="],
+    "@lexical/mark": ["@lexical/mark@0.53.0", "", { "dependencies": { "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-b6CkBVl/bWa0ZP8P9FqDbRsi7HX0fWyfrLrvSSa/EOkiaydVZ5Npqac/fV8IqP5tUBwTohQms0H0nriJeBsnig=="],
 
-    "@lexical/markdown": ["@lexical/markdown@0.49.0", "", { "dependencies": { "@lexical/code-core": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/link": "0.49.0", "@lexical/list": "0.49.0", "@lexical/rich-text": "0.49.0", "@lexical/selection": "0.49.0", "@lexical/text": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-n7x/3OLdi5R0ztICCn8udxRIWFZFVtmQS3a06Tjkyvm/j/dPlFQ/henKSOFjjX/IqVzQzSmiNaDhqKWxXM5npQ=="],
+    "@lexical/markdown": ["@lexical/markdown@0.53.0", "", { "dependencies": { "@lexical/code-core": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/link": "0.53.0", "@lexical/list": "0.53.0", "@lexical/rich-text": "0.53.0", "@lexical/selection": "0.53.0", "@lexical/text": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-kQ/MlE/zaG2k5NtO+15QIOVPbDO9vwfW4JpNXads2fM2v4qQVjdvuEq+Elm6CjwVz/L7fDjT2JgUjg/Ozkpqkw=="],
 
-    "@lexical/overflow": ["@lexical/overflow@0.49.0", "", { "dependencies": { "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-h5Qjv2SkpI76kaukvKJzvWehG9hwB06GEmAnp6aJaioOzoDcBAeWpmYBebtBUwRm0PNLFe3YICFFLpZ5Tg5VoQ=="],
+    "@lexical/overflow": ["@lexical/overflow@0.53.0", "", { "dependencies": { "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-8MSMCVlYEqtEOEf+fF1dBmg3nFwRQRxikFOOcTOs4KgKb3hLSCs9hMWdSuO1+DNciLT2rin4b5jXJJZ2cYTcRw=="],
 
-    "@lexical/plain-text": ["@lexical/plain-text@0.49.0", "", { "dependencies": { "@lexical/clipboard": "0.49.0", "@lexical/dragon": "0.49.0", "@lexical/extension": "0.49.0", "@lexical/selection": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-l7IuUj9n9CtFfz4Fz6zU6mmO+VkcnvyyebABx+lHevvTa7B6YI5PPVgABFfzdyPanyW/FGs7qpKBf59inAqbkg=="],
+    "@lexical/plain-text": ["@lexical/plain-text@0.53.0", "", { "dependencies": { "@lexical/clipboard": "0.53.0", "@lexical/dragon": "0.53.0", "@lexical/extension": "0.53.0", "@lexical/selection": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-5I1scAnq5Wc6l9a/aFOXuEyw7QA5pFMawD1ATmghI7ybGNciM7iODJTCrZK96RueBs3odpzLtEX2mjwy/PhovQ=="],
 
-    "@lexical/react": ["@lexical/react@0.49.0", "", { "dependencies": { "@floating-ui/react": "^0.27.19", "@lexical/a11y": "0.49.0", "@lexical/devtools-core": "0.49.0", "@lexical/dragon": "0.49.0", "@lexical/extension": "0.49.0", "@lexical/hashtag": "0.49.0", "@lexical/history": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/link": "0.49.0", "@lexical/list": "0.49.0", "@lexical/mark": "0.49.0", "@lexical/markdown": "0.49.0", "@lexical/overflow": "0.49.0", "@lexical/plain-text": "0.49.0", "@lexical/rich-text": "0.49.0", "@lexical/table": "0.49.0", "@lexical/text": "0.49.0", "@lexical/utils": "0.49.0", "@lexical/yjs": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "react": ">=18.x", "react-dom": ">=18.x", "typescript": ">=5.2", "yjs": ">=13.5.22" }, "optionalPeers": ["typescript", "yjs"] }, "sha512-NqXF4i/IBFKVDDLDJYTwmBXE++MQuIrTQs7VTux6IPyDEpyfeFMn1rQTFb949S3f7rs33Rcu1uGtFbODQfS1Iw=="],
+    "@lexical/react": ["@lexical/react@0.53.0", "", { "dependencies": { "@floating-ui/react": "^0.27.19", "@lexical/a11y": "0.53.0", "@lexical/devtools-core": "0.53.0", "@lexical/dragon": "0.53.0", "@lexical/extension": "0.53.0", "@lexical/hashtag": "0.53.0", "@lexical/history": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/link": "0.53.0", "@lexical/list": "0.53.0", "@lexical/mark": "0.53.0", "@lexical/markdown": "0.53.0", "@lexical/overflow": "0.53.0", "@lexical/plain-text": "0.53.0", "@lexical/rich-text": "0.53.0", "@lexical/table": "0.53.0", "@lexical/text": "0.53.0", "@lexical/utils": "0.53.0", "@lexical/yjs": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "react": ">=18.x", "react-dom": ">=18.x", "typescript": ">=5.2", "yjs": ">=13.5.37" }, "optionalPeers": ["typescript", "yjs"] }, "sha512-LiTwacTsFwWFqh2cS01U3Ffe15ypzaBwkVcdcD47wN0mauwbNsZoGPumWKgvI69trBfF1MUeRQxEyO9EzWGuhw=="],
 
-    "@lexical/rich-text": ["@lexical/rich-text@0.49.0", "", { "dependencies": { "@lexical/clipboard": "0.49.0", "@lexical/dragon": "0.49.0", "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/selection": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-LM+d8ULmQvi2Av6UaW4NAIa/Bj9FOo9oh6+dglTzuoFPFQ3sogy5c38i2K9k0ul7aE+bFsXkSmHbu4LkrHIkBQ=="],
+    "@lexical/rich-text": ["@lexical/rich-text@0.53.0", "", { "dependencies": { "@lexical/a11y": "0.53.0", "@lexical/clipboard": "0.53.0", "@lexical/dragon": "0.53.0", "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/selection": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-Hz7Ari2IbuY/BEO/Q4wMToPClvOCjEoKSNdhFCJePDfdnGUVSMOXLl4SGvKgC7aQB302Pc5hTysLPuS8XwxlSw=="],
 
-    "@lexical/selection": ["@lexical/selection@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-08Vd1+VoC6YnztWOFWVsqF/Hxw5EP8qeL1c7t3+rVCV8revLzXxdQw+vbPX3tgM4fmjOBDUXk6Ws1+rTtsqjcQ=="],
+    "@lexical/selection": ["@lexical/selection@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-K7yTg/7PRZTKZ8UzzTC1tme4WEAz39vg4MqteHqrspmXFM3OubTXcANdXZFvMyzTDJ7g3sIoDkjD73kroDvO2Q=="],
 
-    "@lexical/table": ["@lexical/table@0.49.0", "", { "dependencies": { "@lexical/clipboard": "0.49.0", "@lexical/extension": "0.49.0", "@lexical/html": "0.49.0", "@lexical/internal": "0.49.0", "@lexical/utils": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-PG+dxSTBPbUZUY2kBZm0pJuqCEOGom4RrGrc6Jlj/7o0F37k/gGRVprFSRKuf3CqO03QIP6qRovXGDuKb+Exuw=="],
+    "@lexical/table": ["@lexical/table@0.53.0", "", { "dependencies": { "@lexical/clipboard": "0.53.0", "@lexical/extension": "0.53.0", "@lexical/html": "0.53.0", "@lexical/internal": "0.53.0", "@lexical/utils": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-He2dAALEW7yvAon0t56m0tMF/oDYX/llHPM+oRc/BvAzpRkkFuV/0oGkJNoEZ1TFvK7tT0OSme0kYW3TLI2FZw=="],
 
-    "@lexical/text": ["@lexical/text@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-mowedvbvx0HDaW+ymVdYmWVhueqgauhhqIWaCtbJj33tPk8pOu1BB0pZuJQbOB+1bDnFiZhkJV8W/CvR2M9lEA=="],
+    "@lexical/text": ["@lexical/text@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-s0zWuQZH7MMl0tNb9qs+GptTv1459lBzsYV7UrrsPVuvD1otHgw3qE9rCSkv2C5oXkTy8MR7t14dFIgqybJhBQ=="],
 
-    "@lexical/utils": ["@lexical/utils@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0", "@lexical/selection": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-Jaa6DERBqxiFOFa49VPRV1WOb7mzRbMZ5U+v+RFagjzTmBhfxDmEkbQQ9nYTU3n3DPfdT8Hkyffextmw04etXg=="],
+    "@lexical/utils": ["@lexical/utils@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0", "@lexical/selection": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-Uq+zEWPnX0eZqRw0gTe3NuPOduePHVmP0dQ3jyoi8JIN3HIQOIn5yTFGejX8j4M3RcYXwgsm89pNWflNWV/8tw=="],
 
-    "@lexical/yjs": ["@lexical/yjs@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0", "@lexical/selection": "0.49.0", "lexical": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2", "yjs": ">=13.5.22" }, "optionalPeers": ["typescript"] }, "sha512-uqV3D0AOLqQ1f/Bo6ZtuDLoJYGlBm0RlucNYhNvfMAncEw0f/xHc1pTyXeWjdCI/iWgWR/MV6hgVi26TSPs+Vg=="],
+    "@lexical/yjs": ["@lexical/yjs@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0", "@lexical/selection": "0.53.0", "lexical": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2", "yjs": ">=13.5.37" }, "optionalPeers": ["typescript"] }, "sha512-5q5vwK3YRv6cBEhF54ATC09RsfVDW8uhRjgD7jcOcbiPvy5oZCsUI04PJs/V7+Nozr3ivmmtfqgBn/orHfbQeQ=="],
+
+    "@lezer/common": ["@lezer/common@1.5.6", "", {}, "sha512-NZxu3q49ck+YYbEJPuIPIyFP37XneBvzPIarBHEXBLBVfkZqQieZ/Y2boYnGNYtmjpOZLnAKs/lwqtmDpi365w=="],
+
+    "@lezer/highlight": ["@lezer/highlight@1.2.5", "", { "dependencies": { "@lezer/common": "^1.3.0" } }, "sha512-O1GMVKgtf5YspFaRzpmqkVgMtIk2HG9uMAbH6wdAIdNh3TVzCsch/+cRi+6l2//UGDKe6NB9BW3cvuR5ezMQ0w=="],
+
+    "@lezer/lr": ["@lezer/lr@1.4.12", "", { "dependencies": { "@lezer/common": "^1.0.0" } }, "sha512-On9HU4oMMiHPMkQDgoTnGahjgG5n/MkN38CgG77sMraKLL+3JBbeQNi1FcCXV9QRqwF9/BUXP3caHyJC1fBOTQ=="],
 
     "@lhci/utils": ["@lhci/utils@0.15.1", "", { "dependencies": { "debug": "^4.3.1", "isomorphic-fetch": "^3.0.0", "js-yaml": "^3.13.1", "lighthouse": "12.6.1", "tree-kill": "^1.2.1" } }, "sha512-WclJnUQJeOMY271JSuaOjCv/aA0pgvuHZS29NFNdIeI14id8eiFsjith85EGKYhljgoQhJ2SiW4PsVfFiakNNw=="],
 
     "@mapbox/node-pre-gyp": ["@mapbox/node-pre-gyp@2.0.3", "", { "dependencies": { "consola": "^3.2.3", "detect-libc": "^2.0.0", "https-proxy-agent": "^7.0.5", "node-fetch": "^2.6.7", "nopt": "^8.0.0", "semver": "^7.5.3", "tar": "^7.4.0" }, "bin": { "node-pre-gyp": "bin/node-pre-gyp" } }, "sha512-uwPAhccfFJlsfCxMYTwOdVfOz3xqyj8xYL3zJj8f0pb30tLohnnFPhLuqp4/qoEz8sNxe4SESZedcBojRefIzg=="],
+
+    "@marijn/find-cluster-break": ["@marijn/find-cluster-break@1.0.4", "", {}, "sha512-Wy0V7+SGUjnF9/TkiM1hKVDPj7jKXduPNboMVtHTA8dySMURWqfg/JZ9E2Sq8JgSJmkl7k7Qe9FLeMSrSraWmQ=="],
 
     "@napi-rs/lzma-linux-x64-gnu": ["@napi-rs/lzma-linux-x64-gnu@1.5.1", "", { "os": "linux", "cpu": "x64" }, "sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ=="],
 
@@ -346,7 +370,9 @@
 
     "@nuxtjs/color-mode": ["@nuxtjs/color-mode@4.0.1", "", { "dependencies": { "@nuxt/kit": "^4.4.6", "exsolve": "^1.0.8", "pathe": "^2.0.3", "pkg-types": "^2.3.1", "semver": "^7.8.1" } }, "sha512-eiA7hWXi5zNHaYKyJFCGF6i0wFZtuvR7KDXZ6jiSvwxjCpRFwphrw0MOSmNfArTSSsT1wpW+/2H92cejeVfUlg=="],
 
-    "@omnidotdev/thornberry": ["@omnidotdev/thornberry@github:omnidotdev/thornberry#372ebb2", { "peerDependencies": { "@ark-ui/react": ">=5.0.0", "@lexical/html": ">=0.39.0", "@lexical/link": ">=0.39.0", "@lexical/list": ">=0.39.0", "@lexical/markdown": ">=0.39.0", "@lexical/react": ">=0.39.0", "@lexical/rich-text": ">=0.39.0", "@unpic/react": ">=1.0.0", "@xyflow/react": ">=12.0.0", "cmdk": ">=1.0.0", "isomorphic-dompurify": ">=3.0.0", "lexical": ">=0.39.0", "lucide-react": ">=0.500.0", "react": ">=19.0.0", "react-dom": ">=19.0.0", "react-hotkeys-hook": ">=5.0.0" } }, "omnidotdev-thornberry-372ebb2", "sha512-76QZYPZ21P0q4YKFSvrOslkb70ffPpaTszz8CVELqfvSRi0l4yUw/XnFyH1ZUILheUXMZgWyAHH/3aKaEqzVOA=="],
+    "@omnidotdev/cadence": ["@omnidotdev/cadence@github:omnidotdev/cadence#9352906", { "dependencies": { "@internationalized/date": "^3.10.1" }, "hasInstallScript": true }, "omnidotdev-cadence-9352906", "sha512-pH+1qGDRtoMF8d0/MfzrkIROiKgkAdGZpX+eDgJfUzI8QeHEOjX0/Wx0qjyMu5cLgvPMw1qZV4iZsMWf6bgnUA=="],
+
+    "@omnidotdev/thornberry": ["@omnidotdev/thornberry@github:omnidotdev/thornberry#58a1be6", { "dependencies": { "@internationalized/date": "^3.10.1", "@omnidotdev/cadence": "github:omnidotdev/cadence#9352906", "class-variance-authority": "^0.7.1", "clsx": "^2.1.1", "react-easy-crop": "^6.2.3" }, "peerDependencies": { "@ark-ui/react": ">=5.0.0", "@codemirror/autocomplete": "^6.18.0", "@codemirror/commands": "^6.11.1", "@codemirror/language": "^6.12.4", "@codemirror/state": "^6.7.6", "@codemirror/view": "^6.43.13", "@lexical/html": ">=0.53.0", "@lexical/link": ">=0.53.0", "@lexical/list": ">=0.53.0", "@lexical/markdown": ">=0.53.0", "@lexical/react": ">=0.53.0", "@lexical/rich-text": ">=0.53.0", "@lezer/highlight": "^1.2.3", "@tanstack/form-core": ">=1.0.0", "@tanstack/react-form": ">=1.0.0", "@tanstack/react-table": ">=8.0.0", "@unpic/react": ">=1.0.0", "@xyflow/react": ">=12.0.0", "cmdk": ">=1.0.0", "codemirror": "^6.0.2", "isomorphic-dompurify": ">=3.0.0", "lexical": ">=0.53.0", "lucide-react": ">=0.500.0", "react": ">=19.0.0", "react-dom": ">=19.0.0", "react-hotkeys-hook": ">=5.0.0" }, "hasInstallScript": true }, "omnidotdev-thornberry-58a1be6", "sha512-/lEDbOhXN9TVBIof3OP9UrZDZEvylMYSUkdpAtUK/y5c4uHuVDAwjsC5LLkyP4LMIx72NpIn0ISrC6y1zy14JA=="],
 
     "@oozcitak/dom": ["@oozcitak/dom@2.0.2", "", { "dependencies": { "@oozcitak/infra": "^2.0.2", "@oozcitak/url": "^3.0.0", "@oozcitak/util": "^10.0.0" } }, "sha512-GjpKhkSYC3Mj4+lfwEyI1dqnsKTgwGy48ytZEhm4A/xnH/8z9M3ZVXKr/YGQi3uCLs1AEBS+x5T2JPiueEDW8w=="],
 
@@ -618,15 +644,21 @@
 
     "@tanstack/devtools-vite": ["@tanstack/devtools-vite@0.4.1", "", { "dependencies": { "@babel/core": "^7.28.4", "@babel/generator": "^7.28.3", "@babel/parser": "^7.28.4", "@babel/traverse": "^7.28.4", "@babel/types": "^7.28.4", "@tanstack/devtools-client": "0.0.5", "@tanstack/devtools-event-bus": "0.4.0", "chalk": "^5.6.2", "launch-editor": "^2.11.1", "picomatch": "^4.0.3" }, "peerDependencies": { "vite": "^6.0.0 || ^7.0.0" } }, "sha512-PkMOomcWnl/pUkCqIjqL/csjPHtkMVBirDpJVOZR7XJZDxo5CuD7B+3KsujFCF4Dsn6QYlae97gCZvxi/CB76Q=="],
 
+    "@tanstack/form-core": ["@tanstack/form-core@1.33.5", "", { "dependencies": { "@tanstack/devtools-event-client": "^0.4.1", "@tanstack/pacer-lite": "^0.1.1", "@tanstack/store": "^0.11.0" } }, "sha512-3dfx9MBP0aq5sXKteikG629X9oviptrQj0IFRk9YGcb+lB7Kv5x8S17oOSk1wUWgjQZ4xVJEMbKwOAODymocgA=="],
+
     "@tanstack/history": ["@tanstack/history@1.162.1", "", {}, "sha512-DR9t6lfLVdrjgCwpglrR9DR7Ok8/HlXjcOE+goWXF3zyuLUO/ug7vMbSFxTqrQTtbRghJfyhmIZ0S6LhPIy44w=="],
 
     "@tanstack/nitro-v2-vite-plugin": ["@tanstack/nitro-v2-vite-plugin@1.155.0", "", { "dependencies": { "nitropack": "^2.13.1", "pathe": "^2.0.3" }, "peerDependencies": { "vite": ">=7.0.0" } }, "sha512-iW9S2c4QxlT+WgKVT+Mw8hzvLqyVSg4UefzX74LX5dfUxbGDahxZItp+07JSD5Ok8ZdTlUHzwLnIsncXh/MNAQ=="],
+
+    "@tanstack/pacer-lite": ["@tanstack/pacer-lite@0.1.1", "", {}, "sha512-y/xtNPNt/YeyoVxE/JCx+T7yjEzpezmbb+toK8DDD1P4m7Kzs5YR956+7OKexG3f8aXgC3rLZl7b1V+yNUSy5w=="],
 
     "@tanstack/query-core": ["@tanstack/query-core@5.102.3", "", {}, "sha512-5O2VEceonqC4uaTLUGglb0hgPouWCJ4K1ykVWyeV8aThhdNCzwpwu01bYoaRNJ9mgFUXS7Kf9utJ46ysT8m+bw=="],
 
     "@tanstack/query-devtools": ["@tanstack/query-devtools@5.102.3", "", {}, "sha512-J/QKK3J+YuqOY/CQBypJSUGANGcdurFyHP4GZDP90QiB3G/wQVeGamo3zFJ/sTcM2uvF3+V7K3rS521xS8B3lQ=="],
 
     "@tanstack/react-devtools": ["@tanstack/react-devtools@0.9.0", "", { "dependencies": { "@tanstack/devtools": "0.10.1" }, "peerDependencies": { "@types/react": ">=16.8", "@types/react-dom": ">=16.8", "react": ">=16.8", "react-dom": ">=16.8" } }, "sha512-Lq0svXOTG5N61SHgx8F0on6zz2GB0kmFjN/yyfNLrJyRgJ+U3jYFRd9ti3uBPABsXzHQMHYYujnTXrOYp/OaUg=="],
+
+    "@tanstack/react-form": ["@tanstack/react-form@1.33.5", "", { "dependencies": { "@tanstack/form-core": "1.33.5", "@tanstack/react-store": "^0.11.0" }, "peerDependencies": { "@tanstack/react-start": "*", "react": "^17.0.0 || ^18.0.0 || ^19.0.0" }, "optionalPeers": ["@tanstack/react-start"] }, "sha512-LlRB28qJwO/QCGaHvWnbdh4haBgTFiZVmzA2uzxSBS3YA7/IqrQ6HOBK70CkFQ+DbflZ7NawsmSln13h5iIdTA=="],
 
     "@tanstack/react-query": ["@tanstack/react-query@5.102.3", "", { "dependencies": { "@tanstack/query-core": "5.102.3" }, "peerDependencies": { "react": "^18 || ^19" } }, "sha512-nHazxUEUQSGJOswGgSL2DI77f2K75WRCowDgaiyEi0ACocZTFKewTv+A/rJfq6QkuE35rVPff1QUT3ClbaePGQ=="],
 
@@ -647,6 +679,8 @@
     "@tanstack/react-start-server": ["@tanstack/react-start-server@1.167.37", "", { "dependencies": { "@tanstack/react-router": "1.170.32", "@tanstack/router-core": "1.171.27", "@tanstack/start-server-core": "1.169.31" }, "peerDependencies": { "react": ">=18.0.0 || >=19.0.0", "react-dom": ">=18.0.0 || >=19.0.0" } }, "sha512-cODHpFU8vIm7AdHii9W3NEuwyruNmT5wLDZjRsJLT9Jp+7FACnfJrRbvxnp1ldSv/9mxcHKi/OgwbdHQeMZcAQ=="],
 
     "@tanstack/react-store": ["@tanstack/react-store@0.9.3", "", { "dependencies": { "@tanstack/store": "0.9.3", "use-sync-external-store": "^1.6.0" }, "peerDependencies": { "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-y2iHd/N9OkoQbFJLUX1T9vbc2O9tjH0pQRgTcx1/Nz4IlwLvkgpuglXUx+mXt0g5ZDFrEeDnONPqkbfxXJKwRg=="],
+
+    "@tanstack/react-table": ["@tanstack/react-table@9.3.1", "", { "dependencies": { "@tanstack/react-store": "^0.11.2", "@tanstack/table-core": "9.3.1" }, "peerDependencies": { "react": ">=18" } }, "sha512-E6Ya5TnY6EaGyZYIUqig/29Lr/gJSAubQkLJFqiWkUl5nRCr0Xr9hvJot+NiRTtG+TzGxHTiqUW3bnLtQxlHug=="],
 
     "@tanstack/router-core": ["@tanstack/router-core@1.171.27", "", { "dependencies": { "@tanstack/history": "1.162.1", "cookie-es": "^3.0.0", "seroval": "^1.6.2", "seroval-plugins": "^1.6.2" } }, "sha512-wDwSLvoLwIaNcnx9UNcN9Mb7Y8QwCYq1U1RQZwyN186gnkIoIYI2SOxy8VqH1vFigbkHkk4FmwMAQlghPgDK2g=="],
 
@@ -670,9 +704,9 @@
 
     "@tanstack/start-storage-context": ["@tanstack/start-storage-context@1.167.29", "", { "dependencies": { "@tanstack/router-core": "1.171.27" } }, "sha512-8qfprC5774XMRDQlMogkfiGpFLiBf0xDG4bMFUbfkSzpCAQwpLbgGY4Zwft22O9rKYq2vUXusKAdVjvJTUEquQ=="],
 
-    "@tanstack/store": ["@tanstack/store@0.9.3", "", {}, "sha512-8reSzl/qGWGGVKhBoxXPMWzATSbZLZFWhwBAFO9NAyp0TxzfBP0mIrGb8CP8KrQTmvzXlR/vFPPUrHTLBGyFyw=="],
+    "@tanstack/store": ["@tanstack/store@0.11.3", "", {}, "sha512-/Mt3h2Qe67HmRMc5SJ+8jM2Fp7O4fBbwOlS0ujUvx34KgAvkvdLSHrJatv0PJG5fbvlDsACTawMMY4ptCpVI8w=="],
 
-    "@tanstack/table-core": ["@tanstack/table-core@8.21.3", "", {}, "sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg=="],
+    "@tanstack/table-core": ["@tanstack/table-core@9.3.1", "", { "dependencies": { "@tanstack/store": "^0.11.2" } }, "sha512-zQvlxSNi2qGM3L4jh85Z6hqMfdIR5qOfD9KHOU32nuKFJGN0RlJ7UvV1lsPb1fPVhpFYI0VP3jJGxLdLDpTKjQ=="],
 
     "@tanstack/virtual-core": ["@tanstack/virtual-core@3.17.8", "", {}, "sha512-BfEvehNpOT75r5Ksc5xW6NZuXujTfb7nlSEyVu4XHG3gdxNg1KqXruWbDewXOUaUYIo4oRbSfkjIajz4MAT8tA=="],
 
@@ -1142,6 +1176,8 @@
 
     "cmdk": ["cmdk@1.1.1", "", { "dependencies": { "@radix-ui/react-compose-refs": "^1.1.1", "@radix-ui/react-dialog": "^1.1.6", "@radix-ui/react-id": "^1.1.0", "@radix-ui/react-primitive": "^2.0.2" }, "peerDependencies": { "react": "^18 || ^19 || ^19.0.0-rc", "react-dom": "^18 || ^19 || ^19.0.0-rc" } }, "sha512-Vsv7kFaXm+ptHDMZ7izaRsP70GgrW9NBNGswt9OZaVBLlE0SNpDq8eu/VGXyF9r7M0azK3Wy7OlYXsuyYLFzHg=="],
 
+    "codemirror": ["codemirror@6.0.2", "", { "dependencies": { "@codemirror/autocomplete": "^6.0.0", "@codemirror/commands": "^6.0.0", "@codemirror/language": "^6.0.0", "@codemirror/lint": "^6.0.0", "@codemirror/search": "^6.0.0", "@codemirror/state": "^6.0.0", "@codemirror/view": "^6.0.0" } }, "sha512-VhydHotNW5w1UGK0Qj96BwSk/Zqbp9WbnyK2W/eVMv4QyF41INRGpjUhFJY7/uDNuudSc33a/PKr4iDqRduvHw=="],
+
     "color-convert": ["color-convert@2.0.1", "", { "dependencies": { "color-name": "~1.1.4" } }, "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ=="],
 
     "color-name": ["color-name@1.1.4", "", {}, "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA=="],
@@ -1171,6 +1207,8 @@
     "crc-32": ["crc-32@1.2.2", "", { "bin": { "crc32": "bin/crc32.njs" } }, "sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ=="],
 
     "crc32-stream": ["crc32-stream@6.0.0", "", { "dependencies": { "crc-32": "^1.2.0", "readable-stream": "^4.0.0" } }, "sha512-piICUB6ei4IlTv1+653yq5+KoqfBYmj9bw6LqXoOneTMDXk5nM1qt12mFW1caG3LlJXEKW1Bp0WggEmIfQB34g=="],
+
+    "crelt": ["crelt@1.0.7", "", {}, "sha512-aK6BbWfhf4U/wCcLHKPJl/xa6VkVstRaPywWtMKGwuOLc/wZTyQYuoxgvZnNsBvv7Kg3YTBQYYBCggcviQczuA=="],
 
     "croner": ["croner@10.0.1", "", {}, "sha512-ixNtAJndqh173VQ4KodSdJEI6nuioBWI0V1ITNKhZZsO0pEMoDxz539T4FTTbSZ/xIOSuDnzxLVRqBVSvPNE2g=="],
 
@@ -1562,7 +1600,7 @@
 
     "legacy-javascript": ["legacy-javascript@0.0.1", "", {}, "sha512-lPyntS4/aS7jpuvOlitZDFifBCb4W8L/3QU0PLbUTUj+zYah8rfVjYic88yG7ZKTxhS5h9iz7duT8oUXKszLhg=="],
 
-    "lexical": ["lexical@0.49.0", "", { "dependencies": { "@lexical/internal": "0.49.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-9V1ZIzGpJEd8rIN+nN7veL4fW4fFWbS66Un4JNqSZB4D5t9euzN9+3+jEXy83FjNjNy0MiiUI3+DQaGCLYko0w=="],
+    "lexical": ["lexical@0.53.0", "", { "dependencies": { "@lexical/internal": "0.53.0" }, "peerDependencies": { "typescript": ">=5.2" }, "optionalPeers": ["typescript"] }, "sha512-yAJJJsIkkfKVemlxC+akk1hJR+P7Zqzch+uTAJ1Wqq6H0o0TkjjaxCyaELd8M9OzWX07f9WOU6RJSyutcVewUw=="],
 
     "lib0": ["lib0@0.2.117", "", { "dependencies": { "isomorphic.js": "^0.2.4" }, "bin": { "0serve": "bin/0serve.js", "0gentesthtml": "bin/gentesthtml.js", "0ecdsa-generate-keypair": "bin/0ecdsa-generate-keypair.js" } }, "sha512-DeXj9X5xDCjgKLU/7RR+/HQEVzuuEUiwldwOGsHK/sfAfELGWEyTcf0x+uOvCvK3O2zPmZePXWL85vtia6GyZw=="],
 
@@ -1710,6 +1748,8 @@
 
     "normalize-url": ["normalize-url@8.1.1", "", {}, "sha512-JYc0DPlpGWB40kH5g07gGTrYuMqV653k3uBKY6uITPWds3M0ov3GaWGp9lbE3Bzngx8+XkfzgvASb9vk9JDFXQ=="],
 
+    "normalize-wheel": ["normalize-wheel@1.0.1", "", {}, "sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA=="],
+
     "nostics": ["nostics@1.2.0", "", {}, "sha512-FGqEfhQjrvo1lL8KFifdTQiNwwQHJxC1jtYE1Rc54qF/jxONUNL+kC9gS1krX8Q65PgrQ5fCqH/I4NhWBvdSqg=="],
 
     "npm-run-path": ["npm-run-path@5.3.0", "", { "dependencies": { "path-key": "^4.0.0" } }, "sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ=="],
@@ -1853,6 +1893,8 @@
     "react": ["react@19.2.8", "", {}, "sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw=="],
 
     "react-dom": ["react-dom@19.2.8", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.8" } }, "sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ=="],
+
+    "react-easy-crop": ["react-easy-crop@6.2.5", "", { "dependencies": { "normalize-wheel": "^1.0.1" }, "peerDependencies": { "@types/react": "*", "react": ">=16.4.0", "react-dom": ">=16.4.0" }, "optionalPeers": ["@types/react"] }, "sha512-NoJ+mtq7vNu6b77VDT1g4D3GXrhp5N4zKR0r63yUbQzbUkr6/aPibFXAOEzxZcHfUB2/R4KwxOU8g3eB7hnKjQ=="],
 
     "react-hotkeys-hook": ["react-hotkeys-hook@5.3.3", "", { "peerDependencies": { "react": ">=16.8.0", "react-dom": ">=16.8.0" } }, "sha512-aswgyWUnE25hmhzHTfKDmKzsaSE5DJ4LKaU/o6rQSXkDd/1Bh9TfAFQbHkf6fLy11HvlYkp+cDDarGdhmCDhoQ=="],
 
@@ -2017,6 +2059,8 @@
     "stubborn-fs": ["stubborn-fs@2.0.0", "", { "dependencies": { "stubborn-utils": "^1.0.1" } }, "sha512-Y0AvSwDw8y+nlSNFXMm2g6L51rBGdAQT20J3YSOqxC53Lo3bjWRtr2BKcfYoAf352WYpsZSTURrA0tqhfgudPA=="],
 
     "stubborn-utils": ["stubborn-utils@1.0.2", "", {}, "sha512-zOh9jPYI+xrNOyisSelgym4tolKTJCQd5GBhK0+0xJvcYDcwlOoxF/rnFKQ2KRZknXSG9jWAp66fwP6AxN9STg=="],
+
+    "style-mod": ["style-mod@4.1.5", "", {}, "sha512-WQ2llCZa9sZSkJA+aOwpg5DkfbAXFKGh//t3MRTBeruFiSBC+GXUmbBzrw3bXyboCWAbtCW9InDfBsXrRD/rAg=="],
 
     "supports-color": ["supports-color@10.2.2", "", {}, "sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g=="],
 
@@ -2298,7 +2342,15 @@
 
     "@tailwindcss/oxide-wasm32-wasi/tslib": ["tslib@2.8.1", "", { "bundled": true }, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
+    "@tanstack/react-form/@tanstack/react-store": ["@tanstack/react-store@0.11.4", "", { "dependencies": { "@tanstack/store": "0.11.3", "use-sync-external-store": "^1.6.0" }, "peerDependencies": { "@types/react": "*", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" }, "optionalPeers": ["@types/react"] }, "sha512-JAQz7LcABVRbxZ6qCd4u/KqDaqBc1qmcOWz7XBTdav1Ib363HQdihCQF1A755nDhoi9VEd6UqZ5thWVKTwIIXw=="],
+
+    "@tanstack/react-store/@tanstack/store": ["@tanstack/store@0.9.3", "", {}, "sha512-8reSzl/qGWGGVKhBoxXPMWzATSbZLZFWhwBAFO9NAyp0TxzfBP0mIrGb8CP8KrQTmvzXlR/vFPPUrHTLBGyFyw=="],
+
+    "@tanstack/react-table/@tanstack/react-store": ["@tanstack/react-store@0.11.4", "", { "dependencies": { "@tanstack/store": "0.11.3", "use-sync-external-store": "^1.6.0" }, "peerDependencies": { "@types/react": "*", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" }, "optionalPeers": ["@types/react"] }, "sha512-JAQz7LcABVRbxZ6qCd4u/KqDaqBc1qmcOWz7XBTdav1Ib363HQdihCQF1A755nDhoi9VEd6UqZ5thWVKTwIIXw=="],
+
     "@tanstack/start-plugin-core/@babel/code-frame": ["@babel/code-frame@7.27.1", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.27.1", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg=="],
+
+    "@tanstack/vue-table/@tanstack/table-core": ["@tanstack/table-core@8.21.3", "", {}, "sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg=="],
 
     "@testing-library/jest-dom/dom-accessibility-api": ["dom-accessibility-api@0.6.3", "", {}, "sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w=="],
 
