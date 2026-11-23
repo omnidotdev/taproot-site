@@ -167,7 +167,7 @@ function HeroSection() {
 
       <div
         className={cn(
-          "flex flex-col items-center gap-4 transition-all delay-150 duration-700",
+          "flex max-w-full flex-col items-center gap-4 transition-all delay-150 duration-700",
           inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
         )}
       >
